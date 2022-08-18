@@ -9,6 +9,8 @@ python = "^3.8"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
+mypy = "^0.971"
+black = "^22.6.0"
 
 [tool.poetry.scripts]
 klickbrick = "klickbrick.cli:main"
