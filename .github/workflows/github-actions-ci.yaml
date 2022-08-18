@@ -19,5 +19,5 @@ jobs:
       - name: Install poetry
         run: pip install poetry
       - name: Check types
-        run: poetry run mypy
+        run: poetry run mypy klickbrick tests
       - run: echo "🍏 This job's status is ${{ job.status }}."
