@@ -17,7 +17,9 @@ jobs:
       - name: Execute tests
         run: python -m unittest
       - name: Install poetry
-        run: pip install poetry
+        run: |
+          pip install poetry
+          poetry install
       - name: Check types
         run: poetry run mypy klickbrick tests
       - run: echo "🍏 This job's status is ${{ job.status }}."
