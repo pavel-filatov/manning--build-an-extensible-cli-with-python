@@ -9,12 +9,10 @@ python = "^3.8"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
-mypy = "^0.971"
-black = "^22.6.0"
+pre-commit = "^2.20.0"
 
 [tool.poetry.scripts]
 klickbrick = "klickbrick.cli:main"
-
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
