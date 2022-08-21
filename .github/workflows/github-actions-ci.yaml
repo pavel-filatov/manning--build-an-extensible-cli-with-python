@@ -33,7 +33,7 @@ jobs:
     steps:
       - name: Deploy to PyPI
         env:
-          POETRY_REPOSITORIES_TESTPYPI_URL=https://test.pypi.org
+          POETRY_REPOSITORIES_TESTPYPI_URL: https://test.pypi.org
         run: |
           poetry deploy -r testpypi -u __token__ -p ${{ secrets.PYPI_TEST_TOKEN }}
       - run: echo "Package deployed successfully"
