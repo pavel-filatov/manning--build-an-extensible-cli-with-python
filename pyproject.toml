@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "klickbrick"
+name = "klickbrix"
 version = "0.1.0"
 description = ""
 authors = ["Pavel Filatov <filatov.py@gmail.com>"]
@@ -12,7 +12,7 @@ pytest = "^5.2"
 pre-commit = "^2.20.0"
 
 [tool.poetry.scripts]
-klickbrick = "klickbrick.cli:main"
+klickbrick = "klickbrix.cli:main"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
