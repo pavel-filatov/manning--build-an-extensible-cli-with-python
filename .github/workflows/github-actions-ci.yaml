@@ -28,5 +28,5 @@ jobs:
           POETRY_REPOSITORIES_TESTPYPI_URL: https://test.pypi.org/legacy/
         run: |
           poetry publish -r testpypi -u __token__ -p ${{ secrets.PYPI_TEST_TOKEN }}
-      - if: github.ref == 'refs/heads/main'
+      - if: github.ref == 'refs/heads/refactor-project'
         run: echo "Package deployed successfully"
