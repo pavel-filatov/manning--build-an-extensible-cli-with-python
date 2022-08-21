@@ -21,12 +21,11 @@ jobs:
         run: poetry run pre-commit run --all-files
       - name: build
         run: poetry build
-      - run: echo "🍏 This job's status is ${{ job.status }}."
       - name: Deploy to PyPI
-        if: github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/refactor-project'
         env:
           POETRY_REPOSITORIES_TESTPYPI_URL: https://test.pypi.org/legacy/
         run: |
           poetry publish -r testpypi -u __token__ -p ${{ secrets.PYPI_TEST_TOKEN }}
-      - if: github.ref == 'refs/heads/refactor-project'
-        run: echo "Package deployed successfully"
+          echo "Package deployed successfully"
+      - run: echo "🍏 This job's status is ${{ job.status }}."
