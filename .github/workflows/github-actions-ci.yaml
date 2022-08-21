@@ -27,6 +27,6 @@ jobs:
         env:
           POETRY_REPOSITORIES_TESTPYPI_URL: https://test.pypi.org
         run: |
-          poetry deploy -r testpypi -u __token__ -p ${{ secrets.PYPI_TEST_TOKEN }}
+          poetry publish -r testpypi -u __token__ -p ${{ secrets.PYPI_TEST_TOKEN }}
       - if: github.ref == 'refs/heads/main'
         run: echo "Package deployed successfully"
