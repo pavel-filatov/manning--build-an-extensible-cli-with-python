@@ -21,5 +21,5 @@ jobs:
           pip install poetry
           poetry install
       - name: Run checks
-        run: poetry run pre-commit --run--all
+        run: poetry run pre-commit run --all-files
       - run: echo "🍏 This job's status is ${{ job.status }}."
